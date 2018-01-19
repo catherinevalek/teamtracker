@@ -1,0 +1,8 @@
+<ul>
+<% @players.each do | player | %>
+	<li>
+  	<%= player.first_name + " " + player.last_name%>
+  	<%= player.positions.first.name %>
+  </li>
+<% end %>
+</ul>
