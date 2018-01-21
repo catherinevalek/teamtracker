@@ -1,1 +1,43 @@
-index.html.erb
+
+
+<ul class="nav nav-tabs" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" href="#teams" role="tab" data-toggle="tab">Teams</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#players" role="tab" data-toggle="tab">Players</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#positions" role="tab" data-toggle="tab">Positions</a>
+  </li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div role="tabpanel" class="tab-pane fade in active" id="teams">...</div>
+  <div role="tabpanel" class="tab-pane fade" id="players">
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Number</th>
+      <th scope="col">Team</th>
+      <th scope="col">Positions</th>
+    </tr>
+  </thead>
+    <tbody>
+<% @players.each do | player | %>
+    <tr>
+      <td><%= player.first_name %></td>
+      <td><%= player.last_name %></td>
+      <td><%= player.number %></td>
+      <td><%= player.team.nickname %></td>
+      <td><%= player.positions.first.name %></td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+  </div>
+  <div role="tabpanel" class="tab-pane fade" id="positions">ccc</div>
+</div>
