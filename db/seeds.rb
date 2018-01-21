@@ -2,10 +2,10 @@ require 'open-uri'
 
 
 cowboys = Team.create!(city: "Dallas", nickname: "Cowboys", colors: "Blue, Silver, White", email: "dallas@cowboys.com", logo: "https://upload.wikimedia.org/wikipedia/commons/1/15/Dallas_Cowboys.svg")
-# Team.create!(city: "Green Bay", nickname: "Packers", colors: "Dark Green, Gold, White", email: "greenbay@packers.com", logo: "")
-# Team.create!(city: "Atlanta", nickname: "Falcons", colors: "", email: "", logo: "")
-# Team.create!(city: "Jacksonville", nickname: "Jaguars", colors: "Teal, Black, Gold, White", email: "", logo: "")
-# Team.create!(city: "Arizona", nickname: "Patriots", colors: "Nave, Red, Silver, White", email: "", logo: "")
+eagles = Team.create!(city: "Philidelphia", nickname: "Eagles", colors: "Dark Green, Gold, White", email: "greenbay@packers.com", logo: "")
+giants = Team.create!(city: "New York", nickname: "Giants", colors: "Dark Blue, Red, White", email: "newyork@giants.com", logo: "")
+redskins = Team.create!(city: "Washington D.C.", nickname: "Redskins", colors: "Teal, Black, Gold, White", email: "washington@redskins.com", logo: "")
+texans = Team.create!(city: "Houston", nickname: "Texans", colors: "Nave, Red, Silver, White", email: "houston@texans.com", logo: "")
 
 Position.create!(name: "Center", description: "performs the normal blocking functions of all linemen and is the player who puts the ball in play by means of the snap", code: "C") 
 Position.create!(name: "Defensive tackle", description: "rush the passer, and stop running plays directed at the middle of the line of scrimmage", code: "DT") 

@@ -14,7 +14,32 @@
 
 <!-- Tab panes -->
 <div class="tab-content">
-  <div role="tabpanel" class="tab-pane fade in active" id="teams">...</div>
+  <div role="tabpanel" class="tab-pane fade in active" id="teams">
+  	  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">City</th>
+      <th scope="col">Nickname</th>
+      <th scope="col">Colors</th>
+      <th scope="col">E-mail</th>
+      <th scope="col">Logo</th>
+      <th scope="col">Total Players</th>
+    </tr>
+  </thead>
+    <tbody>
+<% @teams.each do | team | %>
+    <tr>
+      <td><%= team.city %></td>
+      <td><%= team.nickname %></td>
+      <td><%= team.colors %></td>
+      <td><%= team.email %></td>
+      <td><%= image_tag team.logo, :size => "100x100" %></td>
+      <td><%= @teams.length %></td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+  </div>
   <div role="tabpanel" class="tab-pane fade" id="players">
   <table class="table">
   <thead>
@@ -39,5 +64,24 @@
   </tbody>
 </table>
   </div>
-  <div role="tabpanel" class="tab-pane fade" id="positions">ccc</div>
+  <div role="tabpanel" class="tab-pane fade" id="positions">
+  	  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Code</th>
+    </tr>
+  </thead>
+    <tbody>
+<% @positions.each do | position | %>
+    <tr>
+      <td><%= position.name %></td>
+      <td><%= position.description %></td>
+      <td><%= position.code %></td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+  </div>
 </div>
