@@ -1,0 +1,25 @@
+  <div class="table-responsive">
+  <div class="panel panel-default">
+     <div class="panel-heading">Player Profile</div>
+<table class="table table-bordered">
+  <tbody>
+    <tr>
+      <th scope="row">Name</th>
+      <td><%= @player.first_name + ' ' + @player.last_name %></td>
+    </tr>
+    <tr>
+      <th scope="row">Number</th>
+      <td><%= @player.number %></td>
+    </tr>
+    <tr>
+      <th scope="row">Team</th>
+      <td><%= @player.team.nickname %></td>
+    </tr>
+    <tr>
+      <th scope="row">Positions</th>
+      <td><%= @player.positions.map(&:name).join(', ') %></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
