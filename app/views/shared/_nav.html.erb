@@ -7,23 +7,35 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Teams
+        </a>
+        <!-- <= link_to "Players", "#", :id = "navbarDropdown" :role => "button" :data-toggle => "dropdown" :aria-haspopup => "true" :aria-expanded => "false" -->
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <%= link_to "Team index", teams_path, :class => "dropdown-item" %>
+        <%= link_to "Add a team", new_team_path, :class => "dropdown-item" %>
+        </div>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
+          Players
         </a>
+        <!-- <= link_to "Players", "#", :id = "navbarDropdown" :role => "button" :data-toggle => "dropdown" :aria-haspopup => "true" :aria-expanded => "false" -->
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
         <%= link_to "Player index", players_path, :class => "dropdown-item" %>
         <%= link_to "Add a player", new_player_path, :class => "dropdown-item" %>
         </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Positions
+        </a>
+        <!-- <= link_to "Players", "#", :id = "navbarDropdown" :role => "button" :data-toggle => "dropdown" :aria-haspopup => "true" :aria-expanded => "false" -->
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <%= link_to "Position index", positions_path, :class => "dropdown-item" %>
+        <%= link_to "Add a position", new_position_path, :class => "dropdown-item" %>
+        </div>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
