@@ -41,7 +41,7 @@ class PlayersController < ApplicationController
   def destroy
     Player.find(params[:id]).destroy
     flash[:success] = "Player deleted"
-    redirect_to :index
+    redirect_to players_url
   end
 
   private

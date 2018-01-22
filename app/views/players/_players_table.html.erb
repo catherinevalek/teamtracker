@@ -1,0 +1,22 @@
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Number</th>
+      <th scope="col">Team</th>
+      <th scope="col">Positions</th>
+    </tr>
+  </thead>
+    <tbody>
+<% @players.each do | player | %>
+    <tr>
+      <td><%= link_to player.full_name, player %></td>
+      <td><%= player.number %></td>
+      <td><%= player.team.nickname %></td>
+      <td><%= player.positions.map(&:name).join(', ') %></td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+</div>
