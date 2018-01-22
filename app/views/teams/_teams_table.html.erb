@@ -1,0 +1,29 @@
+<div class="table-responsive">
+  <div class="card">
+     <div class="card-header">Teams</div>
+      <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">City</th>
+      <th scope="col">Nickname</th>
+      <th scope="col">Colors</th>
+      <th scope="col">E-mail</th>
+      <th scope="col">Logo</th>
+      <th scope="col">Total Players</th>
+    </tr>
+  </thead>
+    <tbody>
+<% @teams.each do | team | %>
+    <tr>
+      <td><%= team.city %></td>
+      <td><%= team.nickname %></td>
+      <td><%= team.colors %></td>
+      <td><%= team.email %></td>
+      <td><%= image_tag team.logo, :size => "100x100" %></td>
+      <td><%= @teams.length %></td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+</div>
+</div>
