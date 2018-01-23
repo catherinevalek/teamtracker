@@ -30,30 +30,10 @@ Position.create!(name: "Running back", description: "carries the ball on most ru
 Position.create!(name: "Wide receiver", description: "speedy pass-catching specialists", code: "WR")
 
 
-
-
-
-
 # phili eagles
 # new york giants
 # washington redskins
 # houston texans
-
- 
-
-
-
- 
- 
-
- 
- 
- 
- 
- 
- 
- 
-
 
 
 
