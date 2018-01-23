@@ -19,7 +19,7 @@
       <td><%= team.nickname %></td>
       <td><%= team.colors %></td>
       <td><%= team.email %></td>
-      <td><%= image_tag team.logo, :size => "100x100" %></td>
+      <td><%= image_tag team.logo.url(:thumb) %></td>
       <td><%= @teams.length %></td>
     </tr>
 <% end %>

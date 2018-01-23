@@ -22,10 +22,11 @@
     </tr>
     <tr>
       <th scope="row">Logo</th>
-      <td><%= @team.logo %></td>
+      <td><%= image_tag @team.logo.url(:thumb) %></td>
     </tr>
   </tbody>
 </table>
 </div>
 </div>
 </div>
+
