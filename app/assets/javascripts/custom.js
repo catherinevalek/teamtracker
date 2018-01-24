@@ -25,7 +25,7 @@ $(document).ready(function() {
     dom: 'Bfltip',
     buttons: [
         {
-            extend: 'excel',
+            extend: 'csvHtml5',
             text: 'Save current page',
             exportOptions: {
                 modifier: {
