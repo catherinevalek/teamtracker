@@ -14,7 +14,7 @@ html {
   margin-top: 50px;
   margin-bottom: 50px;
   // padding-top: 25px;
-  // padding-bottom: 25px;
+  // padding-bottom: 10px;
 }
 
 .check_box {
@@ -23,7 +23,7 @@ html {
 
 }
 .table {
-	margin-bottom: 0px;
+	margin-bottom: 5px;
 }
 
 .container {
@@ -34,9 +34,10 @@ label {
 	margin-top: 15px;
 }
 
-// .pagination {
-// 	margin-bottom: 10px;
-// }
+.pagination {
+  padding-top: 5px;
+	padding-bottom: 10px;
+}
 
 
 
