@@ -12,7 +12,7 @@ class TeamsController < ApplicationController
     @team = Team.new(team_params)
 
     if @team.save
-      flash[:success] = "team created!"
+      flash[:success] = "Team created!"
       redirect_to @team
     else
       render :new
@@ -40,7 +40,7 @@ class TeamsController < ApplicationController
 
   def destroy
     Team.find(params[:id]).destroy
-    flash[:success] = "team deleted."
+    flash[:success] = "Team deleted."
     redirect_to teams_url
   end
 
