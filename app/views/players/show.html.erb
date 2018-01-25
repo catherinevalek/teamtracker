@@ -2,11 +2,11 @@
   <div class="table-responsive">
   <div class="card">
      <div class="card-header">Player Profile</div>
-<table class="table table-bordered">
+<table class="table">
   <tbody>
     <tr>
       <th scope="row">Name</th>
-      <td><%= @player.full_name %></td>
+      <td><%= link_to @player.full_name, edit_player_path(:id => @player.id) %></td>
     </tr>
     <tr>
       <th scope="row">Number</th>

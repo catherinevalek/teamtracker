@@ -2,11 +2,11 @@
   <div class="table-responsive">
   <div class="card">
      <div class="card-header">Position Profile</div>
-<table class="table table-bordered">
+<table class="table">
   <tbody>
     <tr>
       <th scope="row">Name</th>
-      <td><%= @position.name %></td>
+      <td><%= link_to @position.name, edit_position_path(:id => @position.id) %></td>
     </tr>
     <tr>
       <th scope="row">Description</th>

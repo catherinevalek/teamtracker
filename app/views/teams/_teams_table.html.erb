@@ -16,11 +16,11 @@
 <% @teams.each do | team | %>
     <tr>
       <td><%= team.city %></td>
-      <td><%= team.nickname %></td>
+      <td><%= link_to team.nickname, team %></td>
       <td><%= team.colors %></td>
       <td><%= team.email %></td>
       <td><%= image_tag team.logo.url(:thumb) %></td>
-      <td><%= @teams.length %></td>
+      <td><%= team.players.count %></td>
     </tr>
 <% end %>
   </tbody>
