@@ -13,9 +13,9 @@
     <div class="form-row">
       <div class="form-group col-md-6">
       <%= f.label :number, "Number" %>
-      <%= f.text_field :number, :class => "form-control" %>
+      <%= f.number_field :number, :class => "form-control" %>
       </div>
-      <div class="form-group col-md-6">
+      <div class="form-group col-md-6 form-inline">
         <%= f.label :team, "Team" %>
         <%= f.select :team_id, Team.all.collect { |team| [team.nickname, team.id ] }, :class => "form-control" %>
       </div>

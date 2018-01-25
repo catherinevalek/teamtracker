@@ -1,65 +1,65 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
 <!--   <a class="navbar-brand" href="#">Teamtracker</a>
- -->  <%= link_to "Teamtracker", root_path, :class => "navbar-brand" %>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+-->  <%= link_to "Teamtracker", root_path, :class => "navbar-brand" %>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Teams
-        </a>
-        <!-- <= link_to "Players", "#", :id = "navbarDropdown" :role => "button" :data-toggle => "dropdown" :aria-haspopup => "true" :aria-expanded => "false" -->
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Teams
+      </a>
+      <!-- <= link_to "Players", "#", :id = "navbarDropdown" :role => "button" :data-toggle => "dropdown" :aria-haspopup => "true" :aria-expanded => "false" -->
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
         <%= link_to "Team index", teams_path, :class => "dropdown-item" %>
         <% if user_signed_in? %>
         <%= link_to "Add a team", new_team_path, :class => "dropdown-item" %>
         <% end %>
-        </div>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Players
-        </a>
-        <!-- <= link_to "Players", "#", :id = "navbarDropdown" :role => "button" :data-toggle => "dropdown" :aria-haspopup => "true" :aria-expanded => "false" -->
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+      </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Players
+      </a>
+      <!-- <= link_to "Players", "#", :id = "navbarDropdown" :role => "button" :data-toggle => "dropdown" :aria-haspopup => "true" :aria-expanded => "false" -->
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
         <%= link_to "Player index", players_path, :class => "dropdown-item" %>
         <% if user_signed_in? %>
         <%= link_to "Add a player", new_player_path, :class => "dropdown-item" %>
         <% end %>
-        </div>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Positions
-        </a>
-        <!-- <= link_to "Players", "#", :id = "navbarDropdown" :role => "button" :data-toggle => "dropdown" :aria-haspopup => "true" :aria-expanded => "false" -->
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+      </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Positions
+      </a>
+      <!-- <= link_to "Players", "#", :id = "navbarDropdown" :role => "button" :data-toggle => "dropdown" :aria-haspopup => "true" :aria-expanded => "false" -->
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
         <%= link_to "Position index", positions_path, :class => "dropdown-item" %>
         <% if user_signed_in? %>
         <%= link_to "Add a position", new_position_path, :class => "dropdown-item" %>
         <% end %>
-        </div>
-      </li>
-            <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Welcome
-        </a>
-        <!-- <= link_to "Players", "#", :id = "navbarDropdown" :role => "button" :data-toggle => "dropdown" :aria-haspopup => "true" :aria-expanded => "false" -->
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+      </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Welcome
+      </a>
+      <!-- <= link_to "Players", "#", :id = "navbarDropdown" :role => "button" :data-toggle => "dropdown" :aria-haspopup => "true" :aria-expanded => "false" -->
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
         <% if user_signed_in? %>
- <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => "dropdown-item" %>
-         <%= link_to "Edit profile", edit_user_registration_path, :class => "dropdown-item"  %>
-<% else %>
- <%= link_to "Sign Up", new_user_registration_path, :class => "dropdown-item" %>
- <%= link_to "Login", new_user_session_path, :class => "dropdown-item" %>
-<% end %>
-        </div>
-      </li>
-    </ul>
+        <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => "dropdown-item" %>
+        <%= link_to "Edit profile", edit_user_registration_path, :class => "dropdown-item"  %>
+        <% else %>
+        <%= link_to "Sign Up", new_user_registration_path, :class => "dropdown-item" %>
+        <%= link_to "Login", new_user_session_path, :class => "dropdown-item" %>
+        <% end %>
+      </div>
+    </li>
+  </ul>
 
 
 
