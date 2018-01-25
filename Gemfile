@@ -32,8 +32,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'pry'
 gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
-gem "paperclip", "~> 4.2"
-gem 'aws-sdk', '< 2.0'
+gem "paperclip", ">= 5.0"
+gem 'aws-sdk', '~> 2.3'
 gem 'devise'
 
 group :development, :test do
