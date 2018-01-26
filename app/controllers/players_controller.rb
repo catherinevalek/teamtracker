@@ -1,7 +1,7 @@
 class PlayersController < ApplicationController
 
   def index
-    @players = Player.all
+    @players = Player.includes(:team, :positions).all
   end
 
   def new
@@ -20,7 +20,7 @@ class PlayersController < ApplicationController
   end
 
   def show
-    @player = Player.find(params[:id])
+    @player = Player.includes(:team, :positions).find(params[:id])
   end
 
   def edit
