@@ -1,4 +1,5 @@
-require 'open-uri'
+require 'rack/test'
+
 
 FactoryBot.define do
   factory :team do
@@ -6,6 +7,11 @@ FactoryBot.define do
   	city "Dallas"
   	colors "Blue, silver"
   	email "cowboys@dallas.com"
-		logo File.new("#{Rails.root}/app/assets/images/dallas.png")
+		logo  Rack::Test::UploadedFile.new("#{Rails.root}/app/assets/images/dallas.png")
+
+		trait :invalid do
+      nickname nil
+    end
+
   end
 end
