@@ -52,11 +52,6 @@ RSpec.configure do |config|
     FactoryBot.reload
   end
 
-# def build_attributes(*args)
-#   FactoryGirl.create(*args).attributes.delete_if do |k, v| 
-#     ["id", "created_at", "updated_at"].member?(k)
-#   end
-# end
 
 # The settings below are suggested to provide a good initial experience
 # with RSpec, but feel free to customize to your heart's content.

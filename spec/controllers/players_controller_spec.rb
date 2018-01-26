@@ -58,14 +58,16 @@ RSpec.describe PlayersController, type: :controller do
     context "as an authenticated user" do
       before do
         @user = FactoryBot.create(:user)
+        @team = FactoryBot.create(:team)
+        @position = FactoryBot.create(:position)
+        @player = Player.new(first_name: "Joe", last_name: "Smith", team: @team, number: 1)
       end
 
       context "with valid attributes" do
         it "adds a player" do
-          player_params = FactoryBot.build(:player).attributes
-          # build_attributes(:player)
+          player_params = @player.attributes
+          player_params[:position_ids] = [ @position.id ] 
           sign_in @user
-          # binding.pry
           expect {
             post :create, params: { player: player_params }
           }.to change(Player, :count).by(1)
