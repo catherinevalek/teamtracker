@@ -39,7 +39,7 @@ class PositionsController < ApplicationController
   end
 
   def destroy
-    Position.find(params[:id]).destroy
+    @position = Position.find(params[:id]).destroy
     flash[:success] = "Position deleted."
     redirect_to positions_url
   end

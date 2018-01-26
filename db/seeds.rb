@@ -2,7 +2,7 @@ require 'open-uri'
 
 
 cowboys = Team.create!(city: "Dallas", nickname: "Cowboys", colors: "Navy Blue, Metallic Silver, White, Royal Blue", email: "dallas@cowboys.com", logo: URI.parse("https://s3.us-east-2.amazonaws.com/dbc-space-app/teams/logos/000/000/001/original/dallas.png").open)
-eagles = Team.create!(city: "Philidelphia", nickname: "Eagles", colors: "Midnight green, Silver, Black, White", email: "philidelhpia@eagles.com", logo: URI.parse("https://s3.us-east-2.amazonaws.com/dbc-space-app/teams/logos/000/000/002/original/phili.png").open)
+eagles = Team.create!(city: "Philadelphia", nickname: "Eagles", colors: "Midnight Green, Silver, Black, White", email: "philadelphia@eagles.com", logo: URI.parse("https://s3.us-east-2.amazonaws.com/dbc-space-app/teams/logos/000/000/002/original/phili.png").open)
 giants = Team.create!(city: "New York", nickname: "Giants", colors: "Dark Blue, Red, White", email: "newyork@giants.com", logo: URI.parse("https://s3.us-east-2.amazonaws.com/dbc-space-app/teams/logos/000/000/003/original/giants.png").open)
 redskins = Team.create!(city: "Washington D.C.", nickname: "Redskins", colors: "Burgundy, Gold", email: "washington@redskins.com", logo: URI.parse("https://s3.us-east-2.amazonaws.com/dbc-space-app/teams/logos/000/000/004/original/redskins.png").open)
 texans = Team.create!(city: "Houston", nickname: "Texans", colors: "Deep Steel Blue, Battle Red, Liberty White", email: "houston@texans.com", logo: URI.parse("https://s3.us-east-2.amazonaws.com/dbc-space-app/teams/logos/000/000/005/original/texans.png").open)

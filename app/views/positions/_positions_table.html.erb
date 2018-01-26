@@ -12,7 +12,7 @@
     <tbody>
 <% @positions.each do | position | %>
     <tr>
-      <td><%= link_to position.name, position %></td>
+      <td><%= link_to position.name, edit_position_path(:id => position.id) %></td>
       <td><%= position.description %></td>
       <td><%= position.code %></td>
     </tr>
