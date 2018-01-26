@@ -1,25 +1,23 @@
-<!-- <div class="table-responsive"> -->
   <div class="card">
-     <div class="card-header">Positions</div>
-      <table class="table table-bordered table-striped table-responsive-md index-table" id="position-table" cellspacing="0" width="100%">
-  <thead>
-    <tr>
-      <th scope="col">Name</th>
-      <th scope="col">Description</th>
-      <th scope="col">Code</th>
-    </tr>
-  </thead>
+   <div class="card-header">Positions</div>
+   <table class="table table-bordered table-striped table-responsive-md index-table" id="position-table" cellspacing="0" width="100%">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Description</th>
+        <th scope="col">Code</th>
+      </tr>
+    </thead>
     <tbody>
-<% @positions.each do | position | %>
-    <tr>
-      <td><%= link_to position.name, edit_position_path(:id => position.id) %></td>
-      <td><%= position.description %></td>
-      <td><%= position.code %></td>
-    </tr>
-<% end %>
-  </tbody>
-</table>
+      <% @positions.each do | position | %>
+      <tr>
+        <td><%= link_to position.name, edit_position_path(:id => position.id) %></td>
+        <td><%= position.description %></td>
+        <td><%= position.code %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
 </div>
-<!-- </div> -->
 
 

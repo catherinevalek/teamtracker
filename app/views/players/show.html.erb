@@ -1,27 +1,27 @@
   <div class="container">
-  <div class="table-responsive">
-  <div class="card">
-     <div class="card-header">Player Profile</div>
-<table class="table">
-  <tbody>
-    <tr>
-      <th scope="row">Name</th>
-      <td><%= @player.full_name %></td>
-    </tr>
-    <tr>
-      <th scope="row">Number</th>
-      <td><%= @player.number %></td>
-    </tr>
-    <tr>
-      <th scope="row">Team</th>
-      <td><%= @player.team.nickname %></td>
-    </tr>
-    <tr>
-      <th scope="row">Positions</th>
-      <td><%= @player.positions.map(&:name).join(', ') %></td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
+    <div class="table-responsive">
+      <div class="card">
+       <div class="card-header">Player Profile</div>
+       <table class="table">
+        <tbody>
+          <tr>
+            <th scope="row">Name</th>
+            <td><%= @player.full_name %></td>
+          </tr>
+          <tr>
+            <th scope="row">Number</th>
+            <td><%= @player.number %></td>
+          </tr>
+          <tr>
+            <th scope="row">Team</th>
+            <td><%= @player.team.nickname %></td>
+          </tr>
+          <tr>
+            <th scope="row">Positions</th>
+            <td><%= @player.positions.map(&:name).join(', ') %></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>

@@ -1,17 +1,17 @@
   <div class="container">
-<div class="row flex-center pt-5 mt-3">
-  <div class="col-xl-7 mx-auto">
-		<div class="card">
-			<div class="card-body">
-				<div class="text-center">
-					<h3 class="white-text"><i class="fa fa-space white-text"></i>Edit player</h3>
-					<hr>
-				</div>
-				<% provide(:button_text, 'Update player') %>
-				<%= render "form" %>
-				<p>Delete player? <%= link_to "Delete", @player, method: :delete, data: { confirm: "Are you sure?" } %></p>
-			</div>
-		</div>
-	</div>
-</div>
-</div>
+  	<div class="row flex-center pt-5 mt-3">
+  		<div class="col-xl-7 mx-auto">
+  			<div class="card">
+  				<div class="card-body">
+  					<div class="text-center">
+  						<h3 class="white-text"><i class="fa fa-space white-text"></i>Edit player</h3>
+  						<hr>
+  					</div>
+  					<% provide(:button_text, 'Update player') %>
+  					<%= render "form" %>
+  					<p>Delete player? <%= link_to "Delete", @player, method: :delete, data: { confirm: "Are you sure?" } %></p>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+  </div>

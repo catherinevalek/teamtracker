@@ -1,15 +1,15 @@
 <div class="container" id="player-form">
-<div class="row align-items-center">
-  <div class="col-xl-7 mx-auto">
-    <div class="card border">
-      <div class="card-body">
-        <div class="text-center">
-          <h3 class="white-text"><i class="fa fa-space white-text"></i>Add a player</h3>
+  <div class="row align-items-center">
+    <div class="col-xl-7 mx-auto">
+      <div class="card border">
+        <div class="card-body">
+          <div class="text-center">
+            <h3 class="white-text"><i class="fa fa-space white-text"></i>Add a player</h3>
+          </div>
+          <% provide(:button_text, 'Add a player') %>
+          <%= render "form" %>
         </div>
-        <% provide(:button_text, 'Add a player') %>
-        <%= render "form" %>
       </div>
     </div>
   </div>
-</div>
 </div>

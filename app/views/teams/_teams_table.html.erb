@@ -1,7 +1,7 @@
-<!-- <div class="table-responsive"> -->
-  <div class="card">
-     <div class="card-header">Teams</div>
-      <table class="table table-bordered table-striped table-responsive-lg index-table" id="team-table" cellspacing="0" width="100%">
+
+<div class="card">
+ <div class="card-header">Teams</div>
+ <table class="table table-bordered table-striped table-responsive-lg index-table" id="team-table" cellspacing="0" width="100%">
   <thead>
     <tr>
       <th scope="col">City</th>
@@ -12,8 +12,8 @@
       <th scope="col">Total Players</th>
     </tr>
   </thead>
-    <tbody>
-<% @teams.each do | team | %>
+  <tbody>
+    <% @teams.each do | team | %>
     <tr>
       <td><%= team.city %></td>
       <td><%= link_to team.nickname, edit_team_path(:id => team.id) %></td>
@@ -22,9 +22,9 @@
       <td><%= image_tag team.logo.url(:thumb) %></td>
       <td><%= team.players.count %></td>
     </tr>
-<% end %>
+    <% end %>
   </tbody>
 </table>
 </div>
-<!-- </div> -->
+
 

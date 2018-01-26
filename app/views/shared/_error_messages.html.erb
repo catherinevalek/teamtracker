@@ -1,10 +1,10 @@
 <% if target.errors.any? %>
-  <div>
-      The form contains <%= pluralize(target.errors.count, "error") %>.
-    <ul>
-    <% target.errors.full_messages.each do |e| %>
-      <li><%= e %></li>
-    <% end %>
-    </ul>
-  </div>
+<div>
+	The form contains <%= pluralize(target.errors.count, "error") %>.
+	<ul>
+		<% target.errors.full_messages.each do |e| %>
+		<li><%= e %></li>
+		<% end %>
+	</ul>
+</div>
 <% end %>
