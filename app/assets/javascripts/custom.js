@@ -1,9 +1,9 @@
 
 $(document).ready(function() {
     var teamTable = $('#team-table').DataTable( {
-    "lengthMenu": [[-1, 5], ["All", 5]],
-    "pageLength": -1,
-    buttons: [
+        "lengthMenu": [[-1, 5], ["All", 5]],
+        "pageLength": -1,
+        buttons: [
         {
             extend: 'csvHtml5',
             text: 'Save current page',
@@ -13,22 +13,21 @@ $(document).ready(function() {
                 }
             }
         }
-    ],
+        ],
 
         "columnDefs": [
-          { "orderable": false, "targets": [-2] },
+        { "orderable": false, "targets": [-2] },
         ]
 
 
     } );
- 
-    teamTable.buttons().container()
-        .appendTo( '#team-table_wrapper .col-md-6:eq(0)' );
 
-        var playerTable = $('#player-table').DataTable( {
-    "lengthMenu": [[-1, 5, 10], ["All", 5, 10]],
-    "pageLength": -1,
-    buttons: [
+    teamTable.buttons().container().appendTo( '#team-table_wrapper .col-md-6:eq(0)' );
+
+    var playerTable = $('#player-table').DataTable( {
+        "lengthMenu": [[-1, 5, 10], ["All", 5, 10]],
+        "pageLength": -1,
+        buttons: [
         {
             extend: 'csvHtml5',
             text: 'Save current page',
@@ -38,18 +37,17 @@ $(document).ready(function() {
                 }
             }
         }
-    ],
+        ],
 
 
     } );
- 
-    playerTable.buttons().container()
-        .appendTo( '#player-table_wrapper .col-md-6:eq(0)' );
 
-            var positionTable = $('#position-table').DataTable( {
-    "lengthMenu": [[-1, 5, 10], ["All", 5, 10]],
-    "pageLength": -1,
-    buttons: [
+    playerTable.buttons().container().appendTo( '#player-table_wrapper .col-md-6:eq(0)' );
+
+    var positionTable = $('#position-table').DataTable( {
+        "lengthMenu": [[-1, 5, 10], ["All", 5, 10]],
+        "pageLength": -1,
+        buttons: [
         {
             extend: 'csvHtml5',
             text: 'Save current page',
@@ -59,17 +57,16 @@ $(document).ready(function() {
                 }
             }
         }
-    ],
+        ],
 
     } );
- 
-    positionTable.buttons().container()
-    .appendTo( '#position-table_wrapper .col-md-6:eq(0)' );
+
+    positionTable.buttons().container().appendTo( '#position-table_wrapper .col-md-6:eq(0)' );
 
 
     $('.buttons-csv').each(function() {
-   $(this).removeClass('dt-button').addClass('btn-sm btn-primary form-control form-control-sm')
-})
+     $(this).removeClass('dt-button').addClass('btn-sm btn-primary form-control form-control-sm')
+ })
 
 } );
 

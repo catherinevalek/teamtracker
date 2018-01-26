@@ -14,4 +14,9 @@
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
+//= require jquery.dataTables.min
+//= require dataTables.buttons.min
+//= require buttons.flash.min
+//= require buttons.html5.min
+//= require dataTables.bootstrap4.min
 //= require_tree .

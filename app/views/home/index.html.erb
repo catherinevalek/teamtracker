@@ -1,27 +1,27 @@
   <div class="container">
 
-<ul class="nav nav-tabs" role="tablist">
-  <li class="nav-item">
-    <a class="nav-link active" href="#teams" role="tab" data-toggle="tab">Teams</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#players" role="tab" data-toggle="tab">Players</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#positions" role="tab" data-toggle="tab">Positions</a>
-  </li>
-</ul>
+    <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" href="#teams" role="tab" data-toggle="tab">Teams</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#players" role="tab" data-toggle="tab">Players</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#positions" role="tab" data-toggle="tab">Positions</a>
+      </li>
+    </ul>
 
-<!-- Tab panes -->
-<div class="tab-content">
-  <div role="tabpanel" class="tab-pane fade show active" id="teams">
-  <%= render "teams/teams_table" %>
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane fade show active" id="teams">
+        <%= render "teams/teams_table" %>
+      </div>
+      <div role="tabpanel" class="tab-pane fade" id="players">
+        <%= render "players/players_table" %>
+      </div>
+      <div role="tabpanel" class="tab-pane fade" id="positions">
+        <%= render "positions/positions_table" %>
+      </div>
+    </div>
   </div>
-  <div role="tabpanel" class="tab-pane fade" id="players">
-  <%= render "players/players_table" %>
-  </div>
-  <div role="tabpanel" class="tab-pane fade" id="positions">
- 	<%= render "positions/positions_table" %>
-  </div>
-</div>
-</div>

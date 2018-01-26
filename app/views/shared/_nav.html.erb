@@ -11,9 +11,7 @@
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Welcome
         </a>
-
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-
           <% if user_signed_in? %>
           <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => "dropdown-item" %>
           <%= link_to "Edit profile", edit_user_registration_path, :class => "dropdown-item"  %>
@@ -45,15 +43,12 @@
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Positions
         </a>
-
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <%= link_to "Show all positions", positions_path, :class => "dropdown-item" %>
           <%= link_to "Add a position", new_position_path, :class => "dropdown-item" %>        
         </div>
       </li>
-
     </ul>
-
   </div>
 </nav>
 
