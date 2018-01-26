@@ -4,7 +4,11 @@ require 'rails_helper'
 RSpec.describe Position, type: :model do
 
   it "is valid with a name, description, code" do
-    position = FactoryBot.create(:position)
+    position = Position.new(
+    name: "Kicker",
+  	description: "kicks the ball",
+  	code: "K",
+  	)
     expect(position).to be_valid
   end
 

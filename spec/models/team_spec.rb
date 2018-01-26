@@ -4,7 +4,14 @@ require 'rails_helper'
 RSpec.describe Team, type: :model do
 
   it "is valid with a nickname, city, email, logo, and colors" do
-    team = FactoryBot.create(:team)
+    team = Team.new(
+    nickname: "Cowboys",
+    city: "Dallas",
+    colors: "Blue, silver",
+    email: "cowboys@dallas.com",
+    logo:  Rack::Test::UploadedFile.new("#{Rails.root}/app/assets/images/dallas.png")
+
+    )
     expect(team).to be_valid
   end
 
