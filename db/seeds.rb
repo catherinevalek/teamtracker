@@ -1,11 +1,11 @@
 require 'open-uri'
 
 
-cowboys = Team.create!(city: "Dallas", nickname: "Cowboys", colors: "Blue, Silver, White", email: "dallas@cowboys.com", logo: "https://s3.us-east-2.amazonaws.com/teamtrackertx/teams/logos/000/000/001/original/giants.png")
-eagles = Team.create!(city: "Philidelphia", nickname: "Eagles", colors: "Dark Green, Gold, White", email: "philidelhpia@eagles.com", logo: "https://s3.us-east-2.amazonaws.com/teamtrackertx/teams/logos/000/000/001/original/giants.png")
-giants = Team.create!(city: "New York", nickname: "Giants", colors: "Dark Blue, Red, White", email: "newyork@giants.com", logo: "https://s3.us-east-2.amazonaws.com/teamtrackertx/teams/logos/000/000/001/original/giants.png")
-redskins = Team.create!(city: "Washington D.C.", nickname: "Redskins", colors: "Teal, Black, Gold, White", email: "washington@redskins.com", logo: "https://s3.us-east-2.amazonaws.com/teamtrackertx/teams/logos/000/000/001/original/giants.png")
-texans = Team.create!(city: "Houston", nickname: "Texans", colors: "Nave, Red, Silver, White", email: "houston@texans.com", logo: "https://s3.us-east-2.amazonaws.com/teamtrackertx/teams/logos/000/000/001/original/giants.png")
+cowboys = Team.create!(city: "Dallas", nickname: "Cowboys", colors: "Navy Blue, Metallic Silver, White, Royal Blue", email: "dallas@cowboys.com", logo: URI.parse("https://s3.us-east-2.amazonaws.com/dbc-space-app/teams/logos/000/000/001/original/dallas.png").open)
+eagles = Team.create!(city: "Philidelphia", nickname: "Eagles", colors: "Midnight green, Silver, Black, White", email: "philidelhpia@eagles.com", logo: URI.parse("https://s3.us-east-2.amazonaws.com/dbc-space-app/teams/logos/000/000/002/original/phili.png").open)
+giants = Team.create!(city: "New York", nickname: "Giants", colors: "Dark Blue, Red, White", email: "newyork@giants.com", logo: URI.parse("https://s3.us-east-2.amazonaws.com/dbc-space-app/teams/logos/000/000/003/original/giants.png").open)
+redskins = Team.create!(city: "Washington D.C.", nickname: "Redskins", colors: "Burgundy, Gold", email: "washington@redskins.com", logo: URI.parse("https://s3.us-east-2.amazonaws.com/dbc-space-app/teams/logos/000/000/004/original/redskins.png").open)
+texans = Team.create!(city: "Houston", nickname: "Texans", colors: "Deep Steel Blue, Battle Red, Liberty White", email: "houston@texans.com", logo: URI.parse("https://s3.us-east-2.amazonaws.com/dbc-space-app/teams/logos/000/000/005/original/texans.png").open)
 
 Position.create!(name: "Center", description: "performs the normal blocking functions of all linemen and is the player who puts the ball in play by means of the snap", code: "C") 
 Position.create!(name: "Defensive tackle", description: "rush the passer, and stop running plays directed at the middle of the line of scrimmage", code: "DT") 
@@ -28,13 +28,7 @@ Position.create!(name: "Strong safety", description: "last line of defense and u
 Position.create!(name: "Tight end", description: "mix between a blocker and a pass receiver", code: "TE") 
 Position.create!(name: "Running back", description: "carries the ball on most running plays and is also frequently used as a short-yardage receiver", code: "RB") 
 Position.create!(name: "Wide receiver", description: "speedy pass-catching specialists", code: "WR")
-
-
-# phili eagles
-# new york giants
-# washington redskins
-# houston texans
-
+Position.create!(name: "Inside lineback", description: "rushing the passer, covering receivers, and defending against the run", code: "ILB")
 
 
 dallas_players = JSON.load(open("http://api.suredbits.com/nfl/v0/team/DAL/roster"))
@@ -47,6 +41,66 @@ dallas_players.each do | player |
 		new_player.first_name = player["firstName"]
 		new_player.last_name = player["lastName"]
 		new_player.team = cowboys
+    new_player.positions << Position.where(code: player["position"])
+    new_player.save!
+	end
+end
+
+phili_players = JSON.load(open("http://api.suredbits.com/nfl/v0/team/PHI/roster"))
+
+
+phili_players.each do | player |
+	new_player = Player.new
+	if player["status"] == "Active"
+		new_player.number = player["uniformNumber"]
+		new_player.first_name = player["firstName"]
+		new_player.last_name = player["lastName"]
+		new_player.team = eagles
+    new_player.positions << Position.where(code: player["position"])
+    new_player.save!
+	end
+end
+
+ny_players = JSON.load(open("http://api.suredbits.com/nfl/v0/team/NYG/roster"))
+
+
+ny_players.each do | player |
+	new_player = Player.new
+	if player["status"] == "Active"
+		new_player.number = player["uniformNumber"]
+		new_player.first_name = player["firstName"]
+		new_player.last_name = player["lastName"]
+		new_player.team = giants
+    new_player.positions << Position.where(code: player["position"])
+    new_player.save!
+	end
+end
+
+dc_players = JSON.load(open("http://api.suredbits.com/nfl/v0/team/WAS/roster"))
+
+
+dc_players.each do | player |
+	new_player = Player.new
+	if player["status"] == "Active"
+		new_player.number = player["uniformNumber"]
+		new_player.first_name = player["firstName"]
+		new_player.last_name = player["lastName"]
+		new_player.team = redskins
+    new_player.positions << Position.where(code: player["position"])
+    new_player.save!
+	end
+end
+
+houston_players = JSON.load(open("http://api.suredbits.com/nfl/v0/team/HOU/roster"))
+
+
+houston_players.each do | player |
+	new_player = Player.new
+	if player["status"] == "Active"
+		new_player.number = player["uniformNumber"]
+		new_player.first_name = player["firstName"]
+		new_player.last_name = player["lastName"]
+		new_player.team = texans
     new_player.positions << Position.where(code: player["position"])
     new_player.save!
 	end

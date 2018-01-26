@@ -1,7 +1,7 @@
 
 $(document).ready(function() {
     var teamTable = $('#team-table').DataTable( {
-    "lengthMenu": [[5, 10, -1], [5, 10, "All"]],
+    "lengthMenu": [[-1, 5], ["All", 5]],
     "pageLength": -1,
     buttons: [
         {
@@ -26,7 +26,7 @@ $(document).ready(function() {
         .appendTo( '#team-table_wrapper .col-md-6:eq(0)' );
 
         var playerTable = $('#player-table').DataTable( {
-    "lengthMenu": [[5, 10, -1], [5, 10, "All"]],
+    "lengthMenu": [[-1, 5, 10], ["All", 5, 10]],
     "pageLength": -1,
     buttons: [
         {
@@ -47,7 +47,7 @@ $(document).ready(function() {
         .appendTo( '#player-table_wrapper .col-md-6:eq(0)' );
 
             var positionTable = $('#position-table').DataTable( {
-    "lengthMenu": [[5, 10, -1], [5, 10, "All"]],
+    "lengthMenu": [[-1, 5, 10], ["All", 5, 10]],
     "pageLength": -1,
     buttons: [
         {
