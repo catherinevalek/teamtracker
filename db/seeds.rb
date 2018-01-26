@@ -1,11 +1,23 @@
 require 'open-uri'
 
 
-cowboys = Team.create!(city: "Dallas", nickname: "Cowboys", colors: "Blue, Silver, White", email: "dallas@cowboys.com", logo: "https://s3.us-east-2.amazonaws.com/dbc-space-app/teams/logos/000/000/001/original/dallas.png")
-eagles = Team.create!(city: "Philidelphia", nickname: "Eagles", colors: "Dark Green, Gold, White", email: "philidelhpia@eagles.com", logo: "https://s3.us-east-2.amazonaws.com/dbc-space-app/teams/logos/000/000/002/original/phili.png")
-giants = Team.create!(city: "New York", nickname: "Giants", colors: "Dark Blue, Red, White", email: "newyork@giants.com", logo: "https://s3.us-east-2.amazonaws.com/dbc-space-app/teams/logos/000/000/003/original/giants.png")
-redskins = Team.create!(city: "Washington D.C.", nickname: "Redskins", colors: "Teal, Black, Gold, White", email: "washington@redskins.com", logo: "https://s3.us-east-2.amazonaws.com/dbc-space-app/teams/logos/000/000/004/original/redskins.png")
-texans = Team.create!(city: "Houston", nickname: "Texans", colors: "Nave, Red, Silver, White", email: "houston@texans.com", logo: "https://s3.us-east-2.amazonaws.com/dbc-space-app/teams/logos/000/000/005/original/texans.png")
+cowboys = Team.new(city: "Dallas", nickname: "Cowboys", colors: "Blue, Silver, White", email: "dallas@cowboys.com")
+eagles = Team.new(city: "Philidelphia", nickname: "Eagles", colors: "Dark Green, Gold, White", email: "philidelhpia@eagles.com")
+giants = Team.new(city: "New York", nickname: "Giants", colors: "Dark Blue, Red, White", email: "newyork@giants.com")
+redskins = Team.new(city: "Washington D.C.", nickname: "Redskins", colors: "Teal, Black, Gold, White", email: "washington@redskins.com")
+texans = Team.new(city: "Houston", nickname: "Texans", colors: "Nave, Red, Silver, White", email: "houston@texans.com")
+
+cowboys.logo_remote_url "https://s3.us-east-2.amazonaws.com/dbc-space-app/teams/logos/000/000/001/original/dallas.png"
+eagles.logo_remote_url "https://s3.us-east-2.amazonaws.com/dbc-space-app/teams/logos/000/000/002/original/phili.png"
+giants.logo_remote_url "https://s3.us-east-2.amazonaws.com/dbc-space-app/teams/logos/000/000/003/original/giants.png"
+redskins.logo_remote_url "https://s3.us-east-2.amazonaws.com/dbc-space-app/teams/logos/000/000/004/original/redskins.png"
+texans.logo_remote_url "https://s3.us-east-2.amazonaws.com/dbc-space-app/teams/logos/000/000/005/original/texans.png"
+
+cowboys.save!
+eagles.save!
+giants.save!
+redskins.save!
+texans.save!
 
 Position.create!(name: "Center", description: "performs the normal blocking functions of all linemen and is the player who puts the ball in play by means of the snap", code: "C") 
 Position.create!(name: "Defensive tackle", description: "rush the passer, and stop running plays directed at the middle of the line of scrimmage", code: "DT") 

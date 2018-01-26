@@ -1,3 +1,5 @@
+require 'open-uri'
+
 class Team < ApplicationRecord
 	# attr_reader :logo_remote_url
 
@@ -10,9 +12,8 @@ class Team < ApplicationRecord
   validates_presence_of :city, :nickname, :colors, :email, :logo
   validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i }
 
-  # def logo_remote_url=(url_value)
-  #   self.logo = URI.parse(url_value)
-  #   @logo_remote_url = url_value
-  # end
+  def logo_remote_url=(url_value)
+    self.logo = URI.parse(url_value)
+  end
 
 end
