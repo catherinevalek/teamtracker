@@ -13,7 +13,7 @@ class Team < ApplicationRecord
   validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i }
 
   def logo_remote_url=(url_value)
-    self.logo = URI.parse(url_value)
+    self.logo = URI.escape(url_value)
   end
 
 end

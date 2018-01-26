@@ -7,11 +7,11 @@ giants = Team.new(city: "New York", nickname: "Giants", colors: "Dark Blue, Red,
 redskins = Team.new(city: "Washington D.C.", nickname: "Redskins", colors: "Teal, Black, Gold, White", email: "washington@redskins.com")
 texans = Team.new(city: "Houston", nickname: "Texans", colors: "Nave, Red, Silver, White", email: "houston@texans.com")
 
-cowboys.logo_remote_url "https://s3.us-east-2.amazonaws.com/dbc-space-app/teams/logos/000/000/001/original/dallas.png"
-eagles.logo_remote_url "https://s3.us-east-2.amazonaws.com/dbc-space-app/teams/logos/000/000/002/original/phili.png"
-giants.logo_remote_url "https://s3.us-east-2.amazonaws.com/dbc-space-app/teams/logos/000/000/003/original/giants.png"
-redskins.logo_remote_url "https://s3.us-east-2.amazonaws.com/dbc-space-app/teams/logos/000/000/004/original/redskins.png"
-texans.logo_remote_url "https://s3.us-east-2.amazonaws.com/dbc-space-app/teams/logos/000/000/005/original/texans.png"
+cowboys.logo_remote_url = "https://s3.us-east-2.amazonaws.com/dbc-space-app/teams/logos/000/000/001/original/dallas.png"
+eagles.logo_remote_url = "https://s3.us-east-2.amazonaws.com/dbc-space-app/teams/logos/000/000/002/original/phili.png"
+giants.logo_remote_url = "https://s3.us-east-2.amazonaws.com/dbc-space-app/teams/logos/000/000/003/original/giants.png"
+redskins.logo_remote_url = "https://s3.us-east-2.amazonaws.com/dbc-space-app/teams/logos/000/000/004/original/redskins.png"
+texans.logo_remote_url = "https://s3.us-east-2.amazonaws.com/dbc-space-app/teams/logos/000/000/005/original/texans.png"
 
 cowboys.save!
 eagles.save!
